@@ -30,10 +30,6 @@
                     "url": "#intro"
                 },
                 {
-                    "text": "Entradas",
-                    "url": "#entradas"
-                },
-                {
                     "text": "Trailer",
                     "url": "#trailer"
                 },
@@ -87,22 +83,14 @@
                 "data": {
                     "id": "intro",
                     "title": "Sinopsis",
-                    "text": "El Festival de la Estrella llega de nuevo este año a la Aldea Sylvania. Mientras todo el mundo lo espera con impaciencia, la Coneja Chocolate Freya está preocupada. El día del festival coincide con el cumpleaños de su madre y no se le ocurre ningún regalo. Además, Freya ha sido designada para el importante papel de preparar el evento principal del festival, el 'Árbol del Año'. Entonces, ¿qué se le ocurrirá a Freya para hacer felices a su madre y a sus amigos?"
+                    "text": "Justine, su marido y su círculo de amigos encuentran una solución a sus problemas de dinero: organizarán un falso crucero romántico para Franck, un rico inversor empeñado en seducir a una mujer. Sólo hay un problema: es a Justine a quien Franck propone este fin de semana de enamorados…"
                 }
             },
-            {
-                "type": "ticketing",
-                "data": {
-                    "id": "entradas", 
-                    "iframeUrl": "https://adsobackend.herokuapp.com/ticketing/sylvanian-families-la-pelicula-el-regalo-de-freya/"
-                    
-                }
-            }, 
             {
                 "type":"parallax",
                 "data": {
                     "id": "parallax",
-                    "image": "assets/images/gallery/sylvanian_img_4_comprimido.jpg"
+                    "image": "assets/images/gallery/el_barco_del_amor_1_comprimido.jpg"
 
                 }
             },
@@ -120,7 +108,7 @@
                 "type": "details",
                 "data": {
                     "id": "movie-details",
-                    "poster": "assets/images/SYLVANIAN-FAMILIES-Poster-comprimido.jpg",
+                    "poster": "assets/images/gallery/EL_BARCO_DEL_AMOR-Poster VE_HR_COMPRIMIDO.jpg",
                     "specs": [
                         {
                             "label": "Título Original",
@@ -169,7 +157,7 @@
                 "type":"parallax",
                 "data": {
                     "id": "parallax",
-                    "image": "assets/images/gallery/sylvanian_img_10.jpg"
+                    "image": "assets/images/gallery/el_barco_del_amor_6_comprimido.jpg"
 
                 }
             },
@@ -181,53 +169,97 @@
                     "title": "Galería",
                     "images": [
                         {
-                            "image": "assets/images/gallery/sylvanian_img_1_comprimido.jpg",
-                            "title": "Sylvanian_Families_image_galeria_1"
+                            "image": "assets/images/gallery/el_barco_del_amor_1_comprimido.jpg",
+                            "title": "el_barco_del_amor_image_galeria_1"
                         },
                         {
-                            "image": "assets/images/gallery/sylvanian_img_10.jpg",
-                            "title": "Sylvanian_Families_image_galeria_2"
+                            "image": "assets/images/gallery/el_barco_del_amor_2_comprimido.jpg",
+                            "title": "el_barco_del_amor_image_galeria_2"
                         },
                         {
-                            "image": "assets/images/gallery/sylvanian_img_3_comprimido.jpg",
-                            "title": "Sylvanian_Families_image_galeria_3"
+                            "image": "assets/images/gallery/el_barco_del_amor_3_comprimido.jpg",
+                            "title": "el_barco_del_amor_image_galeria_3"
                         },
                         {
-                            "image": "assets/images/gallery/sylvanian_img_4_comprimido.jpg",
-                            "title": "Sylvanian_Families_image_galeria_4"
+                            "image": "assets/images/gallery/el_barco_del_amor_4_comprimido.jpg",
+                            "title": "el_barco_del_amor_image_galeria_4"
                         },
                         {
-                            "image": "assets/images/gallery/sylvanian_img_5_comprimido.jpg",
-                            "title": "Sylvanian_Families_image_galeria_5"
+                            "image": "assets/images/gallery/el_barco_del_amor_5_compriido.jpg",
+                            "title": "el_barco_del_amor_image_galeria_5"
                         },
                         {
-                            "image": "assets/images/gallery/sylvanian_img_7_comprimido.jpg",
-                            "title": "Sylvanian_Families_image_galeria_6"
+                            "image": "assets/images/gallery/el_barco_del_amor_6_comprimido.jpg",
+                            "title": "el_barco_del_amor_image_galeria_6"
                         },
                         {
-                            "image": "assets/images/gallery/sylvanian_img_6_comprimido.jpg",
-                            "title": "Sylvanian_Families_image_galeria_7"
+                            "image": "assets/images/gallery/el_barco_del_amor_7_comprimido.jpg",
+                            "title": "el_barco_del_amor_image_galeria_7"
                         },
                         {
-                            "image": "assets/images/gallery/sylvanian_img_8_comprimido.jpg",
-                            "title": "Sylvanian_Families_image_galeria_8"
-                        },
-                        {
-                            "image": "assets/images/gallery/sylvanian_img_10.jpg",
-                            "title": "Sylvanian_Families_image_galeria_9"
+                            "image": "assets/images/gallery/el_barco_del_amor_still_comprimido.jpg",
+                            "title": "el_barco_del_amor_image_galeria_8"
                         }
-                       
                        
                     ]
                 }
             },
+            {
+                "type":"parallax",
+                "data": {
+                    "id": "parallax",
+                    "image": "assets/images/gallery/el_barco_del_amor_4_comprimido.jpg"
+
+                }
+            },
+            {
+                "type": "quotes",
+                "data": {
+                    "id": "opiniones", 
+                    "title": "La crítica dice...", 
+                    "background": "" ,
+                    "quotes": [
+                        
+                        {
+                            "image": null, 
+                            "text": "Léa Drucker en estado de gracia", 
+                            "authorName": "", 
+                            "authorMedia": "LE MONDE", 
+                            "linkURL": "" 
+                        },
+                        {
+                            "image": null, 
+                            "text": "Samuel Kircher, magnético.", 
+                            "authorName": "", 
+                            "authorMedia": "POSITIVE", 
+                            "linkURL": "" 
+                        },
+                        {
+                            "image": null, 
+                            "text": "Hermosa y profunda como el lienzo de un maestro.", 
+                            "authorName": "", 
+                            "authorMedia": "LE CANARD ENCHAÎNÉ", 
+                            "linkURL": "" 
+                        },
+                        {
+                            "image": null, 
+                            "text": "Brillante y afilada", 
+                            "authorName": "", 
+                            "authorMedia": "EL MUNDO", 
+                            "linkURL": "" 
+                        }
             
+    
+                       
+                    ]
+                }
+            },
                     
             {
                 "type":"parallax",
                 "data": {
                     "id": "parallax",
-                    "image": "assets/images/gallery/sylvanian_img_6_comprimido.jpg"
+                    "image": "assets/images/gallery/el_barco_del_amor_still_comprimido.jpg"
 
                 }
             },
