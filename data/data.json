@@ -3,9 +3,9 @@
 
 
         "site": {
-            "movieName": "Sylvanian Families La película",
+            "movieName": "El Barco del Amor",
             "url": "https://www.sylvanianfamilieslapelicula.es ",
-            "description": "El Festival de la Estrella llega de nuevo este año a la Aldea Sylvania. Mientras todo el mundo lo espera con impaciencia, la Coneja Chocolate Freya está preocupada. El día del festival coincide con el cumpleaños de su madre y no se le ocurre ningún regalo. Además, Freya ha sido designada para el importante papel de preparar el evento principal del festival, el 'Árbol del Año'. Entonces, ¿qué se le ocurrirá a Freya para hacer felices a su madre y a sus amigos?",
+            "description": "Justine, su marido y su círculo de amigos encuentran una solución a sus problemas de dinero: organizarán un falso crucero romántico para Franck, un rico inversor empeñado en seducir a una mujer. Sólo hay un problema: es a Justine a quien Franck propone este fin de semana de enamorados…",
             "image": ""
         },
 
@@ -17,8 +17,8 @@
             "fontDisplay": "",
             "colorBase": "#000000",
             "colorAccent": "#ffffff",
-            "colorBgPrimary": "#F7C78B",
-            "colorBgSecondary": "#a91a1d"
+            "colorBgPrimary": "#e7e7d2",
+            "colorBgSecondary": "#3c5c77"
         },
 
 
@@ -124,7 +124,7 @@
                     "specs": [
                         {
                             "label": "Título Original",
-                            "value": "Sylvanian Families"
+                            "value": "La Petite Vadrouille"
                         },
                         {
                             "label": "Año",
@@ -132,31 +132,31 @@
                         },
                         {
                             "label": "Duración",
-                            "value": "65 min."
+                            "value": "96 min."
                         },
                         {
                             "label": "Nacionalidad",
-                            "value": "Japón"   
+                            "value": "Francia"   
                         },
                         {
                             "label": "Versión Original",
-                            "value": "Japonés"
+                            "value": "Francés"
                         },
                         {
                             "label": "Género",
-                            "value": "Animación"
+                            "value": "Comedia, Romance"
                         },
                         {
                             "label": "Dirección",
-                            "value": "Kazuya Konaka"
+                            "value": "Bruno PODALYDES"
                         },
                         {
                             "label": "Guión",
-                            "value": "Hirotoshi Kobayashi"
+                            "value": "Bruno PODALYDES"
                         },
                         {
-                            "label": "Música",
-                            "value": "Jun Ichikawa"
+                            "label": "Reparto",
+                            "value": "Sandrine Kiberlain, Daniel Auteuil, Denis Podalydés, Bruno Podalydés, Florence Muller, Isabelle Candelier, Jean-Noël Brouté, Dimitri Doré"
                         },
                         {
                             "label": "Calificación",
