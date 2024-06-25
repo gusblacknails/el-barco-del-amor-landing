@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ data.site.movieName }}</title>
+    <meta name="description" content="{{ data.site.description }}">
+
+    {# JS and CSS #}
+    <script src="assets/scripts.js"></script>
+    <link rel="stylesheet" href="assets/scripts.css">
+    <link rel="stylesheet" href="assets/styles.css">
+
+    {# Google Fonts #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="{{ data.config.googleFontsURL }}" rel="stylesheet">
+
+
+    {# OpenGraph Facebook/General #}
+    <meta property="og:title" content="{{ data.site.movieName }}">
+    <meta property="og:url" content="{{ data.site.url }}">
+    <meta property="og:description" content="{{ data.site.description }}">
+    <meta property="og:type" content=video.movie>
+    <meta property="og:image" content="{{ data.site.image }}">
+    <meta property="og:locale" content="es_ES" />
+
+    {# OpenGraph Twitter #}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ data.site.movieName }}">
+    <meta name="twitter:description" content="{{ data.site.description }}">
+    <meta name="twitter:image" content="{{ data.site.image }}">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KKCQH53B');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+{# Project Styles #}
+<style>
+    :root { 
+        --font-base: {{ data.config.fontBase }}, Arial, Helvetica, sans-serif;
+        --font-display: {{ data.config.fontDisplay }}, sans-serif;
+        --color-base: {{ data.config.colorBase }};
+        --color-accent: {{ data.config.colorAccent }};
+        --color-bg-primary: {{ data.config.colorBgPrimary }};
+        --color-bg-secondary: {{ data.config.colorBgSecondary }};
+    }
+</style>
+
+{# Reveal Animations #}
+<style>
+    .c-hero{
+        height: 92vh !important;
+    }
+    [data-reveal] {
+      transition-property: opacity, transform;
+      transition-duration: 1000ms;
+      transition-timing-function: ease-in-out;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+</style>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKCQH53B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    {# Menu #}
+    {% import "components/_menu.html" as menu %}
+    {% if data.menu %}
+        {{ menu.component(data.menu, data.site) }}
+    {% endif %}
+
+
+    <main id="top" class="c-main">
+
+        {##
+         # Imports
+        ##}
+
+        {% import "components/_call-to-action.html" as callToAction %}
+        {% import "components/_details.html" as details %}
+        {% import "components/_follow-us.html" as followUs %}
+        {% import "components/_gallery.html" as gallery %}
+        {% import "components/_hero.html" as hero %}
+        {% import "components/_image.html" as image %}
+        {% import "components/_logos.html" as logos %}
+        {% import "components/_quotes.html" as quotes %}
+        {% import "components/_share.html" as share %}
+        {% import "components/_text-and-image-one.html" as textAndImageOne %}
+        {% import "components/_text-and-image-two.html" as textAndImageTwo %}
+        {% import "components/_text-centered.html" as textCentered %}
+        {% import "components/_ticketing.html" as ticketing %}
+        {% import "components/_video.html" as video %}
+        {% import "components/_parallax.html" as parallax %}
+
+        {##
+         # Macro Logic
+        ##}
+
+        {% for section in data.sections %}
+
+            {% if section.type === "callToAction" %}
+                {{ callToAction.component(section.data) }}
+
+            {% elif section.type === "video" %}
+                {{ video.component(section.data) }}
+
+            {% elif section.type === "details" %}
+                {{ details.component(section.data, data.site) }}
+
+            {% elif section.type === "followUs" %}
+                {{ followUs.component(section.data) }}
+
+            {% elif section.type === "gallery" %}
+                {{ gallery.component(section.data) }}
+
+            {% elif section.type === "hero" %}
+                {{ hero.component(section.data, data.site) }}
+
+            {% elif section.type === "image" %}
+                {{ image.component(section.data) }}
+
+            {% elif section.type === "logos" %}
+                {{ logos.component(section.data) }}
+
+            {% elif section.type === "quotes" %}
+                {{ quotes.component(section.data) }}
+
+            {% elif section.type === "share" %}
+                {{ share.component(section.data, data.site) }}
+
+            {% elif section.type === "textAndImageOne" %}
+                {{ textAndImageOne.component(section.data) }}
+
+            {% elif section.type === "textAndImageTwo" %}
+                {{ textAndImageTwo.component(section.data) }}
+
+            {% elif section.type === "textCentered" %}
+                {{ textCentered.component(section.data) }}
+
+            {% elif section.type === "ticketing" %}
+                {{ ticketing.component(section.data, data.site) }}
+            {% elif section.type === "parallax" %}
+                {{ parallax.component(section.data, data.site) }}
+
+
+
+            {% endif %}
+
+        {% endfor %}
+
+    </main>
+
+
+    {# Footer #}
+    {% import "components/_footer.html" as footer %}
+    {{ footer.component(data.footer, data.site) }}
+
+
+</body>
+<script>
+    const arrow = document.querySelector('.arrow-down');
+
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        arrow.classList.remove('arrow-show');
+        arrow.classList.add('arrow-hide');
+    } else {
+        arrow.classList.remove('arrow-hide');
+        arrow.classList.add('arrow-show');
+    }
+    });
+
+</script>
+</html>

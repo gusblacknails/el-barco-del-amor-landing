@@ -1,0 +1,122 @@
+{#
+    Component Footer
+    ========================================
+
+    "footer": {
+        "logoMovie": "assets/images/logo-sick-of-myself-footer.png",
+        "copyright": {
+            "company": "ADSO Films",
+            "logo": "assets/images/logo-adso-footer.png",
+            "link": "https://adso.tv/",
+            "texts": [
+                "Copyright ADSO Films",
+                "Todos los derechos reservados"
+            ]
+        },
+        "legalLinks": [ (optional)
+            {
+                "text": "Política de Cookies",
+                "URL": "..."
+            },
+            {
+                "text": "Protección de Datos",
+                "URL": "..."
+            }
+        ]
+    }
+#}
+
+{% macro component(localData, siteData) %}
+<footer class="c-footer">
+
+    <div class="u-container u-container--align-stretch">
+
+        <div class="u-col u-col-12 u-md-col-4 u-lg-col-4">
+            <div class="c-footer__section c-footer__movie-logo">
+                <img src="{{ localData.logoMovie }}" alt="{{ siteData.movieName }}" class="c-footer__movie-logo-img"/>
+            </div>
+        </div>
+
+        <div class="u-col u-col-12 u-md-col-4 u-lg-col-5">
+            <div class="c-footer__section c-footer__copyright">
+
+                <a href="{{ localData.copyright.link }}" target="_blank" class="c-footer__copyright-logo">
+                    <img src="{{ localData.copyright.logo }}" alt="{{ localData.copyright.company }}"/>
+                </a>
+
+                <ul>
+                    {% for text in localData.copyright.texts %}
+                    <li>
+                        <span class="c-footer__copyright-texts">{{ text }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        </div>
+        
+
+        <div class="u-col u-col-12 u-md-col-4 u-lg-col-3">
+            <div class="c-footer__section c-footer__legal-links">
+                <ul>
+                    {% for link in localData.legalLinks %}
+                    <li>
+                        <a href="{{ link.URL }}" target="_blank">{{ link.text }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <section class="c-share" id="{{ localData.id }}" style="background-image: url('{{ localData.background }}');" data-reveal>
+
+        <div class="u-container u-container--center">
+    
+            {% if localData.title %}
+            <div class="u-col u-col-px u-col-12">
+                <h2 class="c-share__title">{{ localData.title }}</h2>
+            </div>
+            {% endif %}
+    
+            <div class="u-col u-col-px u-col-12">
+                <ul class="c-share__icons-list">
+    
+                    {# Twitter #}
+                    <li class="c-share__icon">
+                        <a href="{{ linkTwitter }}" target="_blank" class="c-share__anchor" title="Comparte en Twitter">
+                            {% include 'components/svg/twitter.svg' %}
+                        </a>
+                    </li>
+    
+                    {# Facebook #}
+                    <li class="c-share__icon">
+                        <a href="{{ linkFacebook }}" target="_blank" class="c-share__anchor" title="Comparte en Facebook">
+                            {% include 'components/svg/facebook.svg' %}
+                        </a>
+                    </li>
+    
+                    {# LinkedIn #}
+                    <li class="c-share__icon">
+                        <a href="{{ linkLinkedin }}" target="_blank" class="c-share__anchor" title="Comparte en LinkedIn">
+                            {% include 'components/svg/linkedin.svg' %}
+                        </a>
+                    </li>
+    
+                    {# Mail #}
+                    <li class="c-share__icon">
+                        <a href="{{ linkMail }}" target="_blank" class="c-share__anchor" title="Comparte por Correo">
+                            {% include 'components/svg/mail.svg' %}
+                        </a>
+                    </li>
+    
+                </ul>
+            </div>
+    
+    
+    
+        </div>
+    
+    </section>
+</footer>
+{% endmacro %}

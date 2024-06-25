@@ -1,0 +1,85 @@
+//
+// Components / Gallery
+// ==========================================================================
+
+
+.c-gallery {
+  margin: var(--space-32) 0;
+  padding: var(--space-40) 0;
+
+  @include breakpoint(md) {
+    margin: var(--space-40) 0;
+    padding: var(--space-40) 0;
+  }
+
+  @include breakpoint(lg) {
+    width: 88%;
+    margin: var(--space-56) auto;
+    padding: var(--space-40) 0;
+  }
+
+  @include breakpoint(xl) {
+    width: 86%;
+  }
+
+  @include breakpoint(xxl) {
+    width: 84%;
+    margin: var(--space-72) auto;
+    padding: var(--space-48) 0;
+  }
+}
+
+
+.c-gallery__title {
+  margin-bottom: var(--space-40);
+  padding: 0 var(--space-16);
+
+  @include typo-sectionTitle;
+}
+
+
+.c-gallery__images {
+
+  @include breakpoint(lg) {
+    justify-content: center;
+    gap: var(--space-16);
+    flex-wrap: wrap !important;
+
+    .swiper-slide {
+      width: auto !important;
+      flex-shrink: 1 !important;
+    }
+  }
+}
+
+
+.c-gallery__img-container {
+  line-height: 0;
+  border: 2px solid var(--color-bg-secondary);
+  box-shadow: 0px 0px 8px rgba( var(--color-black), 0.4);
+
+  img {
+
+    @include breakpoint(lg) {
+      height: 200px;
+    }
+  }
+
+  @include breakpoint(lg) {
+    transition: opacity 0.2s ease-out;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.55;
+    }
+  }
+}
+
+
+.c-gallery__nav {
+  margin-top: var(--space-24);
+
+  @include breakpoint(lg) {
+    display: none;
+  }
+}

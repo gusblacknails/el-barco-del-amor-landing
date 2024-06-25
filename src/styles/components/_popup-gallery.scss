@@ -1,0 +1,134 @@
+//
+// Components / Popup Gallery
+// ================================================================================
+
+
+.c-popup-gallery {
+  position: fixed;
+  inset: 0;
+  z-index: var(--zindex-aboveMenu);
+  padding: var(--space-120) var(--space-24);
+
+  display: flex; // Initial state is 'none'
+  justify-content: center;
+
+  transition: opacity 0.4s ease-out;
+
+  // Background
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    background-color: var(--color-bg-primary);
+    opacity: 0.95;
+  }
+
+  // Initial State
+  opacity: 0;
+  visibility: hidden; // Handled by JS
+
+  &.-is-visible {
+    opacity: 1;
+  }
+
+  @include breakpoint(lg) {
+    padding: var(--space-120) var(--space-120);
+  }
+}
+
+
+.c-popup-gallery__slider {
+  height: 100%;
+  width: 100%;
+}
+
+.c-popup-gallery__img-container {
+  height: 100%;
+
+  img {
+    max-height: 100%;
+
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 0px 8px rgba( var(--color-black), 0.4);
+
+    &:hover {
+      cursor: grab;
+    }
+  }
+}
+
+
+
+
+
+// Navigation
+// ========================================
+
+
+.c-popup-gallery__nav {
+  position: absolute;
+  bottom: var(--space-240);
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: var(--space-24);
+
+  @include breakpoint(md) {
+    display: unset;
+    bottom: var(--space-24);
+  }
+
+  @include breakpoint(lg) {
+    bottom: var(--space-24);
+  }
+}
+
+
+.c-popup-gallery__prev,
+.c-popup-gallery__next {
+
+  @include breakpoint(md) {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    // z-index: $zindex-navigations;
+  }
+}
+
+
+
+
+
+// Close
+// ========================================
+
+
+.c-popup-gallery__close {
+  position: absolute;
+  top: var(--space-24);
+  right: var(--space-24);
+
+  height: var(--space-40);
+  width: var(--space-40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-base);
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  background-color: var(--color-bg-secondary);
+
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--color-bg-primary);
+    background-color: var(--color-accent);
+  }
+}

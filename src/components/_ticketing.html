@@ -1,0 +1,33 @@
+{#
+    Component Ticketing
+    ========================================
+
+    "sections": {
+        {
+            "type": "ticketing",
+            "data": {
+                "id": "entradas", (optional)
+                "iframe": "<iframe ...></iframe>"
+            }
+        },
+    }
+#}
+
+{% macro component(localData, siteData) %}
+<section class="c-ticketing" id="{{ localData.id }}" data-reveal>
+
+    <div class="u-container u-container--center">
+        <div class="u-col u-col _u-col-px u-col-12">
+            <div class="c-ticketing__wrapper">
+                <iframe
+                    src='{{ localData.iframeUrl }}'
+                    title='Entradas para {{ siteData.movieName }}'
+                    frameborder='0'
+                    allow="geolocation *"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endmacro %}

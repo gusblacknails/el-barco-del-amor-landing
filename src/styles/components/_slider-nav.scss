@@ -1,0 +1,42 @@
+//
+// Components / Slider Navigation
+// ==========================================================================
+
+
+.c-slider-nav {
+  display: flex;
+  justify-content: center;
+
+  // Safari
+  // gap: var(--space-16);
+}
+
+
+.c-slider-nav__arrow {
+  height: var(--space-40);
+  width: var(--space-40);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-base);
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  background-color: var(--color-bg-secondary);
+
+  transition: all 0.2s ease-out;
+
+  // Safari
+  margin: 0 var(--space-8);
+
+  &:not(.swiper-button-disabled):hover {
+    cursor: pointer;
+    color: var(--color-bg-primary);
+    background-color: var(--color-accent);
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.25;
+  }
+}

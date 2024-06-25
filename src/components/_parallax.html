@@ -1,0 +1,24 @@
+{# Component Parallax ======================================== 
+    "sections": { {
+        "type": "parallax", 
+        "data": { "id": "image-end", (optional) 
+        "title": "", 
+        "mobile":"assets/images/image-end--mobile.webp", 
+        "desktop":"assets/images/image-end--desktop.webp" } 
+        } 
+    } 
+#} 
+        
+{% macro component(localData)%}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+<div class="parallax-window" data-parallax="scroll" data-image-src="{{ localData.image }}"></div>
+<style>
+    .parallax-window {
+    min-height: 600px;
+    background: transparent;
+}
+</style>
+{% endmacro %}

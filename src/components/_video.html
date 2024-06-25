@@ -1,0 +1,28 @@
+{#
+    Component Video
+    ========================================
+
+    "sections": {
+        {
+            "type": "video",
+            "data": {
+                "id": "video", (optional)
+                "iframe": "<iframe ...></iframe>"
+            }
+        },
+    }
+#}
+
+{% macro component(localData) %}
+<section class="c-video" id="{{ localData.id }}" data-reveal>
+
+    <div class="u-container u-container--center">
+        <div class="u-col u-col u-col-px u-col-12">
+            <div class="c-video__video">
+                {{ localData.iframe | safe }}
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endmacro %}

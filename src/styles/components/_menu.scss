@@ -1,0 +1,279 @@
+//
+// Components / Menu
+// ========================================
+
+
+.c-menu {
+  height: var(--space-64);
+
+  @include breakpoint(lg) {
+    position: fixed;
+    z-index: var(--zindex-menu);
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--space-56);
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--color-bg-primary);
+    box-shadow: 0px 0px 8px rgba( var(--color-black), 0.25);
+
+    opacity: 0.95;
+    transition: all 0.2s ease-out;
+
+    // Page at top
+    .--page-at-top & {
+      background-color: transparent;
+      box-shadow: 0px 0px 8px rgba( var(--color-black), 0);
+      opacity: 1;
+    }
+  }
+}
+
+
+.c-menu__wrapper {
+  padding: var(--space-8) var(--space-16);
+  height: 100%;
+
+  background-color: var(--color-bg-primary);
+
+  @include breakpoint(lg) {
+    background-color: unset;
+  }
+}
+
+
+.c-menu__logo {
+  height: 150%;
+  max-width: 75%;
+
+  display: flex;
+  align-items: center;
+
+  transition: all 0.2s ease-out;
+
+  img {
+    height: 130%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center left;
+  }
+
+  @include breakpoint(md) {
+    max-width: 50%;
+  }
+
+  @include breakpoint(lg) {
+    max-width: unset;
+
+    // Page at top
+    .--page-at-top & {
+      opacity: 0;
+    }
+  }
+}
+
+
+
+
+
+// Toggle button
+// ========================================
+
+
+.c-menu__toggle {
+  all: unset;
+
+  position: fixed;
+  z-index: var(--zindex-menuToggle);
+  top: var(--space-12);
+  right: var(--space-12);
+
+  width: var(--space-40);
+  height: var(--space-40);
+
+  border-radius: 999px;
+  background-color: var(--color-accent);
+  color: var(--color-bg-primary);
+  box-shadow: 0px 0px 8px rgba( var(--color-black), 0.25);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include breakpoint(lg) {
+    display: none;
+  }
+}
+
+
+.c-menu__icon {
+  position: absolute;
+  // inset: 0;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+
+  // Safari...
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  svg {
+    position: absolute;
+    top: var(--space-8);
+    left: var(--space-8);
+  }
+
+  transition: opacity 0.4s ease-out;
+}
+
+
+.c-menu__icon--open {
+  opacity: 1;
+
+  .--is-active & {
+    opacity: 0;
+  }
+}
+
+
+.c-menu__icon--close {
+  opacity: 0;
+
+  .--is-active & {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+// Menu
+// ========================================
+
+
+.c-menu__nav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: var(--zindex-menu);
+  top: 0;
+  right: -100vw;
+  bottom: 0;
+
+  padding: var(--space-12) var(--space-16) var(--space-40) var(--space-16);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--color-bg-primary);
+  box-shadow: 0px 0px 8px rgba( var(--color-black), 0);
+  transition: right 0.5s ease-in-out;
+
+  &.--is-active {
+    right: 0;
+    box-shadow: 0px 0px 8px rgba( var(--color-black), 0.25);
+
+    @include breakpoint(lg) {
+      right: auto;
+      box-shadow: none;
+    }
+  }
+
+
+  @include breakpoint(sm) {
+    width: var(--space-320);
+    right: calc(-1 * var(--space-320));
+  }
+
+
+  @include breakpoint(lg) {
+    position: relative;
+    height: 100%;
+    width: auto;
+    top: unset;
+    right: unset;
+    bottom: unset;
+
+    display: block;
+    padding: var(--space-12) var(--space-24);
+
+    background-color: transparent;
+  }
+}
+
+
+.c-menu__mobile-logo {
+  height: var(--space-40);
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 137%;
+    width: 100%;
+    max-width: 75%;
+
+    object-fit: contain;
+    object-position: center left;
+  }
+
+  @include breakpoint(lg) {
+    display: none;
+  }
+}
+
+
+.c-menu__links-list {
+
+  @include breakpoint(lg) {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--space-24);
+  }
+
+  @include breakpoint(xl) {
+    gap: var(--space-32);
+  }
+}
+
+
+.c-menu__anchor {
+  display: block;
+  margin: var(--space-8) 0;
+  padding: var(--space-4) 0;
+
+  font-family: var(--font-display);
+  font-size: var(--fontSize-24);
+  color: var(--color-base);
+  text-decoration: none;
+
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    color: var(--color-accent);
+
+    // Page at top
+    .--page-at-top & {
+      color: rgba(var(--color-bg-primary), 1);
+      // opacity: 0.5;
+    }
+  }
+
+  @include breakpoint(lg) {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-base);
+    font-size: var(--fontSize-20);
+
+    // Page at top
+    .--page-at-top & {
+      color: rgba(var(--color-white), 1);
+    }
+  }
+}

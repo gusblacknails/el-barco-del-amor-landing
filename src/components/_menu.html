@@ -1,0 +1,70 @@
+{#
+    Component Menu
+    ========================================
+
+    "menu": {
+        "logo": "assets/images/sick-of-myself-logo-menu.png",
+        "links": [
+            {
+                "text": "Inicio",
+                "url": "#hero"
+            },
+            {
+                "text": "Área de Prensa",
+                "url": "https://drive.google.com/drive/folders/1kkTFc3f--I3ikM2ZFFQPA-6pUlZOMR7j",
+                "target": "_blank"
+            }
+            ...
+        ]
+    },
+#}
+
+{% macro component(localData, siteData) %}
+<header class="c-menu">
+
+    <div class="c-menu__wrapper">
+
+        <a href="#top" class="c-menu__logo">
+            <img src="{{ localData.logo }}" alt="{{ siteData.movieName }}" class="c-footer__movie-logo-img"/>
+        </a>
+
+        <button class="c-menu__toggle" aria-controls="menu-principal" aria-label="Show or Hide menu">
+            <div class="c-menu__icon c-menu__icon--open">
+                {% include 'components/svg/menu-open.svg' %}
+            </div>
+            <div class="c-menu__icon c-menu__icon--close">
+                {% include 'components/svg/menu-close.svg' %}
+            </div>
+        </button>
+
+    </div>
+
+    <nav id="main-menu" class="c-menu__nav">
+
+        <div class="c-menu__mobile-logo">
+            <img src="{{ localData.logo }}" alt="{{ siteData.movieName }}" class="c-footer__movie-logo-img"/>
+        </div>
+
+        <ul class="c-menu__links-list">
+            {% for link in localData.links %}
+            <li class="c-menu__list-item">
+                <a class="c-menu__anchor"
+
+                    href="{{ link.url }}"
+
+                    {% if link.target %}
+                    target="{{ link.target }}"
+                    {% endif %}
+                >
+                    {{ link.text }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+
+    </nav>
+
+</header>
+
+<div class="c-modal-bg"></div>
+{% endmacro %}

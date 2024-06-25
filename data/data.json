@@ -1,0 +1,259 @@
+{
+    "data": {
+
+
+        "site": {
+            "movieName": "Sylvanian Families La película",
+            "url": "https://www.sylvanianfamilieslapelicula.es ",
+            "description": "El Festival de la Estrella llega de nuevo este año a la Aldea Sylvania. Mientras todo el mundo lo espera con impaciencia, la Coneja Chocolate Freya está preocupada. El día del festival coincide con el cumpleaños de su madre y no se le ocurre ningún regalo. Además, Freya ha sido designada para el importante papel de preparar el evento principal del festival, el 'Árbol del Año'. Entonces, ¿qué se le ocurrirá a Freya para hacer felices a su madre y a sus amigos?",
+            "image": ""
+        },
+
+
+        "config": {
+
+            "googleFontsURL": "https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap",
+            "fontBase": "Roboto, sans-serif",
+            "fontDisplay": "",
+            "colorBase": "#000000",
+            "colorAccent": "#ffffff",
+            "colorBgPrimary": "#F7C78B",
+            "colorBgSecondary": "#a91a1d"
+        },
+
+
+        "menu": {
+            "logo": "assets/images/sylvanian-logo-menu2.png",
+            "links": [
+                {
+                    "text": "Sinopsis",
+                    "url": "#intro"
+                },
+                {
+                    "text": "Entradas",
+                    "url": "#entradas"
+                },
+                {
+                    "text": "Trailer",
+                    "url": "#trailer"
+                },
+              
+                {
+                    "text": "Ficha",
+                    "url": "#movie-details"
+                },
+
+
+                {
+                    "text": "Galería",
+                    "url": "#galeria"
+                },  
+                {
+                    "text": "Materiales",
+                    "url": "https://drive.google.com/drive/folders/1kkEWiMqOB-UIQnqeUleRhFeaWnbNXi2v",
+                    "target": "_blank"
+                }
+            ]
+        },
+
+
+        "sections": [
+
+            {
+                "type": "hero",
+                "data": {
+                    "id": "hero",
+                    "image": {
+                        "mobile": "",
+                        "desktop": ""
+                    },
+                    "video": "https://adso-pictures.b-cdn.net/landing-videos/trailer_sylvanian_families_sinsonido",
+                    "heroLogo": "assets/images/sylvanian-families-titulo.png",
+                    "buttons": [
+                        {
+                            "text": "Ver Tráiler", 
+                            "url": "#trailer", 
+                            "target": null 
+                            
+                        }
+                       
+                        
+                    ]
+                }
+            },
+       
+            {
+                "type": "textCentered",
+                "data": {
+                    "id": "intro",
+                    "title": "Sinopsis",
+                    "text": "El Festival de la Estrella llega de nuevo este año a la Aldea Sylvania. Mientras todo el mundo lo espera con impaciencia, la Coneja Chocolate Freya está preocupada. El día del festival coincide con el cumpleaños de su madre y no se le ocurre ningún regalo. Además, Freya ha sido designada para el importante papel de preparar el evento principal del festival, el 'Árbol del Año'. Entonces, ¿qué se le ocurrirá a Freya para hacer felices a su madre y a sus amigos?"
+                }
+            },
+            {
+                "type": "ticketing",
+                "data": {
+                    "id": "entradas", 
+                    "iframeUrl": "https://adsobackend.herokuapp.com/ticketing/sylvanian-families-la-pelicula-el-regalo-de-freya/"
+                    
+                }
+            }, 
+            {
+                "type":"parallax",
+                "data": {
+                    "id": "parallax",
+                    "image": "assets/images/gallery/sylvanian_img_4_comprimido.jpg"
+
+                }
+            },
+
+            {
+                "type": "video",
+                "data": {
+                    "id": "trailer",
+                    "iframe": "<iframe src='https://iframe.mediadelivery.net/embed/239519/5d302e19-7e37-4caf-9f0b-957330d79f67' loading='lazy' style='border: none; position: absolute; top: 0; height: 100%; width: 100%;' allow='accelerometer; gyroscope; encrypted-media; picture-in-picture;' allowfullscreen='true'></iframe>"
+                }
+            },
+          
+
+            {
+                "type": "details",
+                "data": {
+                    "id": "movie-details",
+                    "poster": "assets/images/SYLVANIAN-FAMILIES-Poster-comprimido.jpg",
+                    "specs": [
+                        {
+                            "label": "Título Original",
+                            "value": "Sylvanian Families"
+                        },
+                        {
+                            "label": "Año",
+                            "value": "2024"
+                        },
+                        {
+                            "label": "Duración",
+                            "value": "65 min."
+                        },
+                        {
+                            "label": "Nacionalidad",
+                            "value": "Japón"   
+                        },
+                        {
+                            "label": "Versión Original",
+                            "value": "Japonés"
+                        },
+                        {
+                            "label": "Género",
+                            "value": "Animación"
+                        },
+                        {
+                            "label": "Dirección",
+                            "value": "Kazuya Konaka"
+                        },
+                        {
+                            "label": "Guión",
+                            "value": "Hirotoshi Kobayashi"
+                        },
+                        {
+                            "label": "Música",
+                            "value": "Jun Ichikawa"
+                        },
+                        {
+                            "label": "Calificación",
+                            "value": "En trámite"
+                        }
+                    ]
+                }
+            },
+            {
+                "type":"parallax",
+                "data": {
+                    "id": "parallax",
+                    "image": "assets/images/gallery/sylvanian_img_10.jpg"
+
+                }
+            },
+
+            {
+                "type": "gallery",
+                "data": {
+                    "id": "galeria",
+                    "title": "Galería",
+                    "images": [
+                        {
+                            "image": "assets/images/gallery/sylvanian_img_1_comprimido.jpg",
+                            "title": "Sylvanian_Families_image_galeria_1"
+                        },
+                        {
+                            "image": "assets/images/gallery/sylvanian_img_10.jpg",
+                            "title": "Sylvanian_Families_image_galeria_2"
+                        },
+                        {
+                            "image": "assets/images/gallery/sylvanian_img_3_comprimido.jpg",
+                            "title": "Sylvanian_Families_image_galeria_3"
+                        },
+                        {
+                            "image": "assets/images/gallery/sylvanian_img_4_comprimido.jpg",
+                            "title": "Sylvanian_Families_image_galeria_4"
+                        },
+                        {
+                            "image": "assets/images/gallery/sylvanian_img_5_comprimido.jpg",
+                            "title": "Sylvanian_Families_image_galeria_5"
+                        },
+                        {
+                            "image": "assets/images/gallery/sylvanian_img_7_comprimido.jpg",
+                            "title": "Sylvanian_Families_image_galeria_6"
+                        },
+                        {
+                            "image": "assets/images/gallery/sylvanian_img_6_comprimido.jpg",
+                            "title": "Sylvanian_Families_image_galeria_7"
+                        },
+                        {
+                            "image": "assets/images/gallery/sylvanian_img_8_comprimido.jpg",
+                            "title": "Sylvanian_Families_image_galeria_8"
+                        },
+                        {
+                            "image": "assets/images/gallery/sylvanian_img_10.jpg",
+                            "title": "Sylvanian_Families_image_galeria_9"
+                        }
+                       
+                       
+                    ]
+                }
+            },
+            
+                    
+            {
+                "type":"parallax",
+                "data": {
+                    "id": "parallax",
+                    "image": "assets/images/gallery/sylvanian_img_6_comprimido.jpg"
+
+                }
+            },
+            {
+                "type": "logos",
+                "data": {
+                    "id": "logos"
+                }
+            }
+
+        ],
+
+        
+        "footer": {
+            "logoMovie": "assets/images/sylvanian-logo-footer.png",
+            "copyright": {
+                "company": "ADSO Films",
+                "logo": "assets/images/Logotipo_Adso_Medium.svg",
+                "link": "https://adso.tv/",
+                "texts": [
+                    "Copyright ADSO Films",
+                    "Todos los derechos reservados"
+                ]
+            }
+        }
+
+
+    }
+}

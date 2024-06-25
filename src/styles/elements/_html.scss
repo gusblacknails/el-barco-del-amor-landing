@@ -1,0 +1,13 @@
+//
+// HTML
+// ================================================================================
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+::selection {
+  background: var(--color-accent);
+}

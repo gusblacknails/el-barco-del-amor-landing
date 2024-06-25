@@ -1,0 +1,39 @@
+{#
+    Component Text Centered
+    ========================================
+
+    "sections": {
+        {
+            "type": "textCentered",
+            "data": {
+                "id": "intro", (optional)
+                "title": "Sinposis", (optional)
+                "text": "Signe y Thomas..."
+            }
+        },
+    }
+#}
+
+{% macro component(localData) %}
+<section class="c-intro" id="{{ localData.id }}" data-reveal>
+
+    {% if localData.title %}
+    <div class="u-container">
+        <div class="u-col u-col-px u-col-12">
+            <h2 class="c-intro__title">
+                {{ localData.title }}
+            </h2>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="u-container u-container--center">
+        <div class="u-col u-col u-col-px u-col-12 u-md-col-10">
+            <div class="c-intro__text">
+                {{ localData.text }}
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endmacro %}

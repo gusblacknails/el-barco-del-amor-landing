@@ -1,0 +1,61 @@
+//
+// Components / Details
+// ==========================================================================
+
+
+.c-details {
+  @include section-margins;
+}
+
+
+.c-details .u-container {
+  @include breakpoint(md) {
+    align-items: center;
+  }
+}
+
+
+.c-details__poster {
+  margin-bottom: var(--space-40);
+  width: 100%;
+
+  @include breakpoint(md) {
+    margin-bottom: 0;
+  }
+}
+
+
+.c-details__specs {
+
+  @include breakpoint(sm) {
+    column-count: 2;
+    column-gap: var(--space-40);
+  }
+
+  @include breakpoint(lg) {
+    transform: translateY( var(--space-40) );
+  }
+}
+
+
+.c-details__specs-item {
+  margin-bottom: var(--space-20);
+
+  @include breakpoint(sm) {
+    margin-bottom: var(--space-24);
+    break-inside: avoid-column;
+  }
+
+  @include breakpoint(lg) {
+
+    &:first-of-type {
+      margin-top: calc( -1 * var(--space-40) );
+    }
+  }
+}
+
+
+.c-details__label {
+  margin-bottom: var(--space-2);
+  @include typo-legend;
+}

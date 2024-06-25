@@ -1,0 +1,104 @@
+{#
+    Component Gallery
+    ========================================
+
+    "sections": {
+        {
+            "type": "gallery",
+            "data": {
+                "id": "galeria", (optional)
+                "title": "Galería", (optional)
+                "images": [
+                    {
+                        "image": "assets/images/gallery/still-1.webp",
+                        "title": "Image 1"
+                    },
+                    {
+                        "image": "assets/images/gallery/still-2.webp",
+                        "title": "Image 2"
+                    },
+                    ...
+                ]
+            }
+        },
+    }
+#}
+
+{% macro component(localData) %}
+<section class="c-gallery" id="{{ localData.id }}" data-section="gallery">
+
+    {# Thumbnail Gallery #}
+    <div class="c-gallery__thumbnails" data-reveal>
+
+        {% if localData.title %}
+        <h2 class="c-gallery__title">{{ localData.title }}</h2>
+        {% endif %}
+
+        <div class="swiper" data-slider="galleryThumbnails">
+
+            <ul class="swiper-wrapper c-gallery__images">
+                {% for image in localData.images %}
+                <div class="swiper-slide">
+                    <div class="c-gallery__img-container">
+                        <img src="{{ image.image }}" alt="{{ image.title }}" data-action="openPopupGallery"/>
+                    </div>
+                </div>
+                {% endfor %}
+            </ul>
+
+            <div class="c-gallery__nav">
+                <div class="c-slider-nav">
+                    <button class="c-slider-nav__arrow c-slider-nav__arrow--prev">
+                        {% include "components/svg/arrow-left.svg" %}
+                    </button>
+                    <button class="c-slider-nav__arrow c-slider-nav__arrow--next">
+                        {% include "components/svg/arrow-right.svg" %}
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    {# Popup Gallery #}
+    <div id="popup-activity-gallery"
+        class="c-popup-gallery"
+        role="dialogue"
+        aria-label="Pictures gallery"
+        tabindex="-1"
+        aria-hidden="true"
+        data-section="galleryPopup"
+    >
+        <div class="c-popup-gallery__container">
+
+            <!-- Close -->
+            <a class="c-popup-gallery__close" aria-label="Close" role="button" data-action="closePopupGallery">
+                {% include "components/svg/menu-close.svg" %}
+            </a>
+
+            <!-- Slider -->
+            <div class="c-popup-gallery__slider" data-slider="galleryPopup">
+
+                <div class="swiper-wrapper">
+                    {% for image in localData.images %}
+                    <div class="swiper-slide">
+                        <div class="c-popup-gallery__img-container">
+                            <img src="{{ image.image }}" alt="{{ image.title }}" />
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Navigation -->
+                <div class="c-popup-gallery__nav">
+                    {% include "components/_slider-nav.html" %}
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+{% endmacro %}
