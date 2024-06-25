@@ -167,6 +167,14 @@
 
                 }
             },
+            {
+                "type": "textCentered",
+                "data": {
+                    "id": "intro",
+                    "title": "SOBRE BRUNO PODALYDÈS",
+                    "text": "Bruno Podalydès es un guionista, director y actor francés. Inicia su carrera como director rodando películas corporativas para Air France. En 1991 dirige su primer cortometraje, Versalles, orilla izquierda (Versailles Rive-Gauche), que obtiene una mención del jurado en Clermont-Ferrand y el César al mejor corto. Su primer largometraje, Solo Dios me ve (Versalles en obras) (Dieu Seul Me voit [Versailles-Chantiers]) logra el mismo éxito y recibe el César a la mejor ópera prima en 1999. Después de rodar tres películas diferentes, en 2009 cierra la trilogía de las estaciones de Versalles con Bancos públicos (Bancs Publics). En 2011, dirigió Adieu Berthe, l’enterrement de Mémé. La película, escrita con su hermano Denis, fue seleccionada para la Quincena de Realizadores del 65º Festival de Cannes 2012. Además de trabajar como director, Bruno Podalydès interpreta pequeños papeles en el cine, entre los que destaca el del corto 'Habría podido ser puta'"
+                }
+            },
 
             {
                 "type": "gallery",
