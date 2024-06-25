@@ -44,9 +44,15 @@
                     "text": "Galería",
                     "url": "#galeria"
                 },  
+
+                {
+                    "text": "Crítica",
+                    "url": "#opiniones"
+                },
+
                 {
                     "text": "Materiales",
-                    "url": "https://drive.google.com/drive/folders/1kkEWiMqOB-UIQnqeUleRhFeaWnbNXi2v",
+                    "url": "https://drive.google.com/drive/folders/1k4ZAqzcUkuU_aUXIzneXsD_JxFu0j-f-",
                     "target": "_blank"
                 }
             ]
