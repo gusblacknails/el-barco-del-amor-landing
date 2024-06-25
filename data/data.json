@@ -222,32 +222,47 @@
                         
                         {
                             "image": null, 
-                            "text": "Léa Drucker en estado de gracia", 
+                            "text": "viaje poético y muy divertido", 
                             "authorName": "", 
-                            "authorMedia": "LE MONDE", 
+                            "authorMedia": "LE PARISIEN", 
                             "linkURL": "" 
                         },
                         {
                             "image": null, 
-                            "text": "Samuel Kircher, magnético.", 
+                            "text": "Como capitán de un barco. Bruno Podalydés lleva a su bello reparto en una escapada poética. Una película amable en forma de himno a la alegría", 
                             "authorName": "", 
-                            "authorMedia": "POSITIVE", 
+                            "authorMedia": "LE FIGARO", 
                             "linkURL": "" 
                         },
                         {
                             "image": null, 
-                            "text": "Hermosa y profunda como el lienzo de un maestro.", 
+                            "text": "En medio de un reparto exquisito, fiel en su mayoria al director, la insesperada presencia e interpretación de Daniel Auteuil es la mejor sorpresa", 
                             "authorName": "", 
-                            "authorMedia": "LE CANARD ENCHAÎNÉ", 
+                            "authorMedia": "TELÉRAMA", 
                             "linkURL": "" 
                         },
                         {
                             "image": null, 
-                            "text": "Brillante y afilada", 
+                            "text": "Sátira social irresistiblemente simpática", 
                             "authorName": "", 
-                            "authorMedia": "EL MUNDO", 
+                            "authorMedia": "LIBÉRATION", 
+                            "linkURL": "" 
+                        },
+                        {
+                            "image": null, 
+                            "text": "Inventiva y optimista, esta comedia veraniega combina habilmente una superficie desenfadada con una viva reflexión sobre el aumento de las desigualdades, el deseo de propiedad y el paso del testigo entre generaciones", 
+                            "authorName": "", 
+                            "authorMedia": "TELÉRAMA", 
+                            "linkURL": "" 
+                        },
+                        {
+                            "image": null, 
+                            "text": "Esta comedia de estafas es un festival de malentendidos y suaves travesuras, orquestado con una delicadeza y un sentido del ritmo que nunca fallan", 
+                            "authorName": "", 
+                            "authorMedia": "QUEST FRANCE", 
                             "linkURL": "" 
                         }
+            
             
     
                        
