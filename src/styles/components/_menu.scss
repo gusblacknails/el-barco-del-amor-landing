@@ -59,6 +59,7 @@
     width: 100%;
     object-fit: contain;
     object-position: center left;
+    margin-bottom: 15px;
   }
 
   @include breakpoint(md) {
