@@ -18,12 +18,12 @@
             "colorBase": "#000000",
             "colorAccent": "#ffffff",
             "colorBgPrimary": "#e7e7d2",
-            "colorBgSecondary": "#3c5c77"
+            "colorBgSecondary": "#69b0b4"
         },
 
 
         "menu": {
-            "logo": "assets/images/sylvanian-logo-menu2.png",
+            "logo": "assets/images/elbarcodelamor_mobile_logo.png",
             "links": [
                 {
                     "text": "Sinopsis",
@@ -70,7 +70,7 @@
                         "desktop": ""
                     },
                     "video": "https://adso-pictures.b-cdn.net/landing-videos/trailer_sylvanian_families_sinsonido",
-                    "heroLogo": "assets/images/sylvanian-families-titulo.png",
+                    "heroLogo": "assets/images/elbarcodelamor_desktop_resized.png",
                     "buttons": [
                         {
                             "text": "Ver Tráiler", 
@@ -303,7 +303,7 @@
 
         
         "footer": {
-            "logoMovie": "assets/images/sylvanian-logo-footer.png",
+            "logoMovie": "assets/images/elbarcodelamor_footer_logo.png",
             "copyright": {
                 "company": "ADSO Films",
                 "logo": "assets/images/Logotipo_Adso_Medium.svg",
